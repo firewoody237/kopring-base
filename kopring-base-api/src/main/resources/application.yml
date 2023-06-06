@@ -1,0 +1,13 @@
+server:
+  servlet:
+    encoding:
+      charset: utf-8
+    context-path: /api
+
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+
+  config:
+    import: optional:classpath:application-env.yml

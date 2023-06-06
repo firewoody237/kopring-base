@@ -1,0 +1,31 @@
+#tomcat
+server:
+  tomcat:
+    shutdown: IMMEDIATE
+    protocol: HTTP/1.1
+    port: 8081
+    maxThreads: 500
+    minSpareThreads: 0
+    secretRequired: false
+    useBodyEncodingForURI: true
+    enableLookups: false
+    maxParameterCount: 10000
+    maxPostSize: 2097152
+
+#db
+db:
+  base:
+    datasource:
+      initialSize: 3
+      minIdle: 3
+      maxIdle: 10
+      maxTotal: 100
+      maxWaitMillis: 6000
+      isPoolPreparedStatements: true
+      maxOpenPreparedStatements: 50
+      testOnBorrow: true
+      testOnReturn: true
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      numTestsPerEvictionRun: 3
+      minEvictableIdleTimeMillis: -1
